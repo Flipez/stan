@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['code@brauser.io']
 
   spec.summary       = 'Static Site Deployment'
-  spec.description   = 'Deploy your static sites easy with roland'
+  spec.description   = 'Deploy your static sites easy with Stan'
   spec.homepage      = 'https://github.com/Flipez/static-stan'
   spec.license       = 'MIT'
 
