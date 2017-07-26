@@ -7,6 +7,10 @@ Install Stan with
 
     $ gem install stan
 
+In order to build the dependencies please make sure you installed the ruby headers.
+
+    $ apt install ruby-dev
+
 ## Usage
 
 ```
