@@ -1,28 +1,38 @@
 # Stan
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/stan`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Stan is a little tool that helps you to deploy static sites to a centralized host.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'stan'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install Stan with
 
     $ gem install stan
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Commands:
+  stan compress DIRECTORY     # compress given directory
+  stan deploy DIRECTORY NAME  # deploys given directory to stan server
+  stan help [COMMAND]         # Describe available commands or one specific command
+  stan server                 # start the server to receive and serve pages
+  stan version                # display the stan version
+```
+
+There are a few variables you have to set:
+
+### Server
+
+`STAN_UPLOAD_DIR=/tmp/stan/upload` is the directory where Stan will temporarly store sites before deploying them.
+`STAN_PUBLIC_DIR=/srv/stan` is the directory where the final site will be deployed.
+
+Please note that Stan will create a public directory and a directory for each deployed site within that folder.
+The final site will then be deployed to `/srv/stan/public/my-site` for example.
+
+### Client
+
+`STAN_SERVER=pages.example.com` is the URL of the remote Stan server which must expose the `/upload` route. Define ports like usual.
+`STAN_TEMP_DIR=/tmp/stan` is the directory where Stan will store the site after compressing it. The archive will be removed after upload.
+
 
 ## Development
 
@@ -38,4 +48,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Flipez
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
