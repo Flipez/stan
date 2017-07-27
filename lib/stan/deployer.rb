@@ -8,7 +8,8 @@ module Stan
         body: {
           name: name,
           file: File.open(source,"r")
-        }
+        },
+        followlocation: true
       )
       FileUtils.rm(source) unless keep
     end
