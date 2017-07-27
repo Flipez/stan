@@ -1,3 +1,4 @@
+require 'date'
 module Stan
   class Compressor
     attr_reader :path, :output, :size
