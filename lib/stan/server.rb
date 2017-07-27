@@ -1,6 +1,9 @@
 require 'sinatra'
 module Stan
   class Server < Sinatra::Base
+    set :bind, ENV.fetch('STAN_BIND')
+    set :port, ENV.fetch('STAN_PORT')
+
     upload_dir = ENV.fetch('STAN_UPLOAD_DIR')
     public_dir = ENV.fetch('STAN_PUBLIC_DIR')
     post '/upload' do

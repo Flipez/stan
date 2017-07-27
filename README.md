@@ -26,16 +26,18 @@ There are a few variables you have to set:
 
 ### Server
 
-`STAN_UPLOAD_DIR=/tmp/stan/upload` is the directory where Stan will temporarly store sites before deploying them.
-`STAN_PUBLIC_DIR=/srv/stan` is the directory where the final site will be deployed.
+* `STAN_UPLOAD_DIR=/tmp/stan/upload` is the directory where Stan will temporarly store sites before deploying them.
+* `STAN_PUBLIC_DIR=/srv/stan` is the directory where the final site will be deployed.
+* `STAN_BIND=127.0.0.1` is the ip to bind to.
+* `STAN_PORT=4567` is the port to use.
 
 Please note that Stan will create a public directory and a directory for each deployed site within that folder.
 The final site will then be deployed to `/srv/stan/public/my-site` for example.
 
 ### Client
 
-`STAN_SERVER=pages.example.com` is the URL of the remote Stan server which must expose the `/upload` route. Define ports like usual.
-`STAN_TEMP_DIR=/tmp/stan` is the directory where Stan will store the site after compressing it. The archive will be removed after upload.
+* `STAN_SERVER=pages.example.com` is the URL of the remote Stan server which must expose the `/upload` route. Define ports like usual.
+* `STAN_TEMP_DIR=/tmp/stan` is the directory where Stan will store the site after compressing it. The archive will be removed after upload.
 
 
 ## Development
