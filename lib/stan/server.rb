@@ -12,8 +12,10 @@ module Stan
       tempfile = params['file']['tempfile']
       FileUtils.mkdir_p(upload_dir)
       filepath = "#{upload_dir}/#{filename}"
-      File.open(filepath, 'wb') do |f|
-        f.write(tempfile.read)
+      while blk = tempfile.read(65536)
+        File.open(filepath, 'wb') do |f|
+          f.write(blk)
+        end
       end
       FileUtils.mkdir_p("#{public_dir}/#{name}")
       Dir.chdir("#{public_dir}/#{name}") do
