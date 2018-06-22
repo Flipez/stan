@@ -1,6 +1,4 @@
-# Stan
-
-Stan is a little tool that helps you to deploy static sites to a centralized host.
+<img src=stan-logo.png width=50% />
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -10,6 +8,8 @@ Stan is a little tool that helps you to deploy static sites to a centralized hos
 * [Development](#development)
 * [Contributing](#contributing)
 * [License](#license)
+
+Stan is a little tool that helps you to deploy static sites to a centralized host.
 
 ## Installation
 Install Stan with
@@ -100,3 +100,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Flipez
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Look at the awesome logo I made at: <a href='https://onlinelogomaker.com' title='Online Logo Maker'>onlinelogomaker.com</a>
