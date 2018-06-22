@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-require 'thor'
-require_relative '../lib/stan'
-require_relative '../lib/stan/cli'
-Stan::Cli.start(ARGV)
