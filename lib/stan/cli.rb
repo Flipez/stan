@@ -1,5 +1,16 @@
+class Thorough < Thor
+  ENV["THOR_DEBUG"] = "1"
+  check_unknown_options!
+private
+  def subcommand(*_) super subcommand(*_)
+  rescue Thor::Error => e
+    $stderr.puts e.message
+    exit 1
+  end
+end
+
 module Stan
-  class Cli < Thor
+  class Cli < Thorough
     desc 'version', 'display the stan version'
     def version
 	    puts('Stan version ' + Stan::VERSION.to_s)
